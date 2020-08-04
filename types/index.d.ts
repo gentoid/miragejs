@@ -262,7 +262,7 @@ declare module "miragejs/server" {
   export type RouteHandler<Registry extends AnyRegistry> = (
     schema: Schema<Registry>,
     request: Request
-  ) => MaybePromise<ModelInstance | Response | object>;
+  ) => MaybePromise<ModelInstance | Response | object | null>;
 
   export interface HandlerOptions {
     /** A number of ms to artificially delay responses to this route. */
